@@ -1,27 +1,30 @@
-# Guide
+# Variação de preço de ativo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+Este desafio consiste em consultar a variação do preço dos ativos a sua escolha nos últimos 30 pregões.
 
-## Development server
+## 🚀 Começando
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-## Code scaffolding
+### 🔧 Para rodar o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Siga os seguintes passos:
 
-## Build
+    1. npm install
+    2. npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ⛑ Rodando testes
 
-## Running unit tests
+Execute o comando `npm test` para executar os testes unitários com [Jest]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Construído com
 
-## Running end-to-end tests
+- [Angular](https://angular.io/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Highcharts](https://www.highcharts.com/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Dados fornecidos por [Yahoo Finance](https://finance.yahoo.com/).
 
-## Further help
+## 🎁 Muito Obrigado!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Agradeço pela oportunidade de participar deste desafio 🤓.

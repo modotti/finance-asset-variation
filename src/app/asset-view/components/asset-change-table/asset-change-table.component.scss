@@ -1,0 +1,42 @@
+.app-asset-change-table {
+  display: flex;
+  justify-content: center;
+
+  table {
+    padding: 0;
+    margin: 0;
+  }
+
+  thead {
+    height: 60px;
+    background-color: #0b0f14;
+  }
+
+  td {
+    background-color: #1e232b;
+    text-align: center;
+    padding: 12px 40px 12px 40px;
+    margin: 0;
+  }
+
+  .positive {
+    color: #1eff00;
+  }
+
+  .negative {
+    color: #ff0054;
+  }
+
+  @media (max-width: 600px) {
+    table {
+      width: 90%;
+      font-size: 0.75rem;
+    }
+
+    td {
+      padding: unset;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}

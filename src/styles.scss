@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Blinker&display=swap");
+@import url("highcharts-theme.scss");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  font-family: "Blinker", sans-serif;
+  background-color: #11151b;
+  color: #fff;
+}
+
+a {
+  color: #1c9b0b;
+}

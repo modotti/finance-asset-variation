@@ -1,0 +1,13 @@
+.app-asset-change-chart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 40px;
+
+  highcharts-chart {
+    max-width: 920px;
+    width: 90%;
+  }
+}
