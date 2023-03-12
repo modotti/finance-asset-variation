@@ -39,9 +39,9 @@ export class AssetChangeComponent implements OnInit {
     this.loading = true;
     this.assetDataService.getDataFromYahoo(symbol).subscribe({
       next: (result: AssetChartResult) => {
-        this.loading = false;
         const handledData = this.assetDataHandlerService.handler(result);
         this.assetChangeList = handledData.changeData;
+        this.loading = false;
         this.errorMessage = null;
       },
       error: (error: Error) => {
