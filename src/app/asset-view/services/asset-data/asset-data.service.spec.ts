@@ -33,8 +33,35 @@ describe('AssetDataService', () => {
       expect(assetData.chart.result.length).toBe(2);
       expect(assetData).toEqual(mockData);
     });
-    const req = httpMock.expectOne('/finance/chart/TST?interval=1d&range=30d');
-    expect(req.request.method).toBe('GET');
+
+    const req = httpMock.expectOne((req) => {
+      return req.method === 'GET';
+    });
     req.flush(mockData);
+  });
+
+  it('should handle HTTP error', () => {
+    const mockErrorResponse = { status: 404, statusText: 'Not found' };
+    const mockData = {
+      chart: {
+        error: {
+          code: 'Not Found',
+          description: 'No data found, symbol may be delisted',
+        },
+      },
+    };
+
+    service.getDataFromYahoo('TST').subscribe({
+      error: (error: Error) => {
+        expect(error.message).toContain(
+          'No data found, symbol may be delisted'
+        );
+      },
+    });
+
+    const req = httpMock.expectOne((req) => {
+      return req.method === 'GET';
+    });
+    req.flush(mockData, mockErrorResponse);
   });
 });

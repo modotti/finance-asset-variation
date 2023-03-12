@@ -43,9 +43,9 @@ export class AssetChangeComponent implements OnInit {
         this.assetChangeList = handledData.changeData;
         this.errorMessage = null;
       },
-      error: (error) => {
+      error: (error: Error) => {
         this.loading = false;
-        this.errorMessage = error;
+        this.errorMessage = error.message;
       },
     });
   }

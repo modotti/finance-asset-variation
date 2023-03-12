@@ -23,19 +23,14 @@ export class AssetDataService {
     };
     return this.httpClient
       .get<AssetChartResult>(url, options)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      errorMessage = error.error.message;
-    } else {
-      const result = error.error as AssetChartResult;
-      errorMessage =
-        result.chart.error?.description ||
-        'An error occurred while trying to retrieve data for the selected asset.';
-    }
+    const result = error.error as AssetChartResult;
+    const errorMessage =
+      result.chart.error?.description ||
+      'An error occurred while trying to retrieve data for the selected asset.';
     return throwError(() => new Error(errorMessage));
   }
 }

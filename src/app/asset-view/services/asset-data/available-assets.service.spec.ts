@@ -13,4 +13,9 @@ describe('AvailableAssetsService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should return expected mocked data', () => {
+    const assets = service.getAssets();
+    expect(assets.length).toBe(25);
+  });
 });
