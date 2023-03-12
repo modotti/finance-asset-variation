@@ -7,6 +7,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
+
 import { AvailableAsset } from '../../models/available-asset.model';
 
 @Component({

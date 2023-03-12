@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { AssetChangeComponent } from './pages/asset-change/asset-change.component';
 import { AssetDataService } from './services/asset-data/asset-data.service';
 import { AssetDataHandlerService } from './services/asset-data/asset-data-handler.service';

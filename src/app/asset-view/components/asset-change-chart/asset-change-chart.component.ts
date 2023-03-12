@@ -1,5 +1,6 @@
 import * as Highcharts from 'highcharts';
 import { Component, Input, OnChanges } from '@angular/core';
+
 import { AssetChangeData } from '../../models/asset-change-period.model';
 
 @Component({

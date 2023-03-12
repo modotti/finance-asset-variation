@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { AssetChangeData } from '../../models/asset-change-period.model';
 import { AssetChartResult } from '../../models/asset-chart-result.model';
 import { AvailableAsset } from '../../models/available-asset.model';
