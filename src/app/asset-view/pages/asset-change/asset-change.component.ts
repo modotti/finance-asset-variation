@@ -12,11 +12,8 @@ import { AvailableAssetsService } from '../../services/asset-data/available-asse
   styleUrls: ['./asset-change.component.scss'],
 })
 export class AssetChangeComponent implements OnInit {
-  @ViewChild('assets') assets!: ElementRef<HTMLSelectElement>;
-
   public assetChangeList: AssetChangeData[] = [];
   public availableAssetList: AvailableAsset[] = [];
-  public symbol: string = '';
 
   public errorMessage: string | null = null;
   public loading = false;
@@ -29,18 +26,17 @@ export class AssetChangeComponent implements OnInit {
 
   ngOnInit(): void {
     this.availableAssetList = this.availableAssetsService.getAssets();
-    this.symbol = this.availableAssetList[0].symbol;
-    this.refreshAssetData();
+    const symbol = this.availableAssetList[0].symbol;
+    this.refreshAssetData(symbol);
   }
 
-  onChangeAsset(): void {
-    this.symbol = this.assets.nativeElement.value;
-    this.refreshAssetData();
+  onChangeAsset(symbol: string): void {
+    this.refreshAssetData(symbol);
   }
 
-  private refreshAssetData(): void {
+  private refreshAssetData(symbol: string): void {
     this.loading = true;
-    this.assetDataService.getDataFromYahoo(this.symbol).subscribe({
+    this.assetDataService.getDataFromYahoo(symbol).subscribe({
       next: (result: AssetChartResult) => {
         this.loading = false;
         const handledData = this.assetDataHandlerService.handler(result);

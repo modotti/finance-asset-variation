@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  margin: 24px auto;
+  max-width: 640px;
+
+  p {
+    flex: auto;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #77808d;
+  }
+
+  @media (max-width: 600px) {
+    flex-flow: column;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

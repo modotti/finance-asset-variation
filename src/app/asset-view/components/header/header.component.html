@@ -1,0 +1,8 @@
+<div class="header">
+  <h1>{{ symbol }}</h1>
+  <select #assets (change)="onChangeAsset()">
+    <option *ngFor="let item of assetList" value="{{ item.symbol }}">
+      {{ item.description }}
+    </option>
+  </select>
+</div>

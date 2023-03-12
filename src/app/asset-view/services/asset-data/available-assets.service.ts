@@ -14,7 +14,7 @@ export class AvailableAssetsService {
         description: 'Petróleo Brasileiro S.A. - Petrobras',
       },
       {
-        symbol: 'HAPV3.SA',
+        symbol: 'HAPV3.SA_ERR',
         description: 'Hapvida Participações e Investimentos S.A.',
       },
       {
