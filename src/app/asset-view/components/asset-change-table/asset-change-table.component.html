@@ -16,9 +16,11 @@
         <td>R$ {{ item.price | number : "1.2-2" }}</td>
         <td
           [ngClass]="
-            item.changeLastDay && item.changeLastDay > 0
-              ? 'positive'
-              : 'negative'
+            item.changeLastDay
+              ? item.changeLastDay > 0
+                ? 'positive'
+                : 'negative'
+              : ''
           "
         >
           {{ item.changeLastDay | number : "1.2-2" }}
@@ -26,9 +28,11 @@
         </td>
         <td
           [ngClass]="
-            item.changeOnPeriod && item.changeOnPeriod > 0
-              ? 'positive'
-              : 'negative'
+            item.changeOnPeriod
+              ? item.changeOnPeriod > 0
+                ? 'positive'
+                : 'negative'
+              : ''
           "
         >
           {{ item.changeOnPeriod | number : "1.2-2" }}
