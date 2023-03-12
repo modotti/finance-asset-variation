@@ -1,30 +1,34 @@
+@import "src/assets/main-theme.scss";
+
 .app-asset-change {
   &__error {
     display: flex;
     justify-content: center;
 
+    max-width: 600px;
     margin: 24px auto;
     padding: 48px;
-    max-width: 600px;
 
-    color: #ff0054;
     text-align: center;
-    background-color: #0d0e10;
+
+    color: $red;
     border-radius: 16px;
+    background-color: $dark-color-300;
   }
 
   &__loading {
     display: flex;
     justify-content: center;
 
+    max-width: 600px;
     margin: 24px auto;
     padding: 48px;
-    max-width: 600px;
 
-    color: #fff;
     text-align: center;
-    background-color: #0d0e10;
+
+    color: $white;
     border-radius: 16px;
+    background-color: $dark-color-300;
   }
 
   @media (max-width: 600px) {

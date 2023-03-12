@@ -1,4 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Unica+One";
+@import "https: //fonts.googleapis.com/css?family=Unica+One";
+
 .highcharts-title,
 .highcharts-subtitle {
   text-transform: uppercase;
@@ -56,27 +57,34 @@
   stroke: #dddddd;
 }
 
-/**
+/*
  * @license Highcharts
  *
  * (c) 2009-2016 Torstein Honsi
  *
  * License: www.highcharts.com/license
- */
+*/
+
 .highcharts-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  line-height: normal;
-  z-index: 0; /* #1072 */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "Unica One", Arial, Helvetica, sans-serif;
   font-size: 12px;
+  line-height: normal;
+
+  position: relative;
+  z-index: 0; /* #1072 */
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
   user-select: none;
-  touch-action: manipulation;
+  text-align: left;
+
   outline: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
 }
 
 .highcharts-root {
@@ -129,17 +137,21 @@
 }
 
 /* Titles */
+
 .highcharts-title {
-  fill: #ffffff;
   font-size: 20px;
+
+  fill: #ffffff;
 }
 
 .highcharts-subtitle {
-  fill: #e0e0e3;
   font-size: 1em;
+
+  fill: #e0e0e3;
 }
 
 /* Axes */
+
 .highcharts-axis-line {
   fill: none;
   stroke: #707073;
@@ -154,9 +166,11 @@
 }
 
 .highcharts-axis-labels {
-  fill: #e0e0e3;
-  cursor: default;
   font-size: 0.9em;
+
+  cursor: default;
+
+  fill: #e0e0e3;
 }
 
 .highcharts-grid-line {
@@ -191,24 +205,29 @@
 }
 
 /* Credits */
+
 .highcharts-credits {
-  cursor: pointer;
-  fill: #666;
   font-size: 0.7em;
+
+  cursor: pointer;
   transition: fill 250ms, font-size 250ms;
+
+  fill: #666;
 }
 
 .highcharts-credits:hover {
-  fill: black;
   font-size: 1em;
+
+  fill: black;
 }
 
 /* Tooltip */
+
 .highcharts-tooltip {
   cursor: default;
-  pointer-events: none;
-  white-space: nowrap;
   transition: stroke 150ms;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .highcharts-tooltip text {
@@ -257,13 +276,15 @@ div.highcharts-tooltip {
 }
 
 .highcharts-point-inactive {
-  opacity: 0.2;
   transition: opacity 50ms; /* quick in */
+
+  opacity: 0.2;
 }
 
 .highcharts-series-inactive {
-  opacity: 0.2;
   transition: opacity 50ms; /* quick in */
+
+  opacity: 0.2;
 }
 
 .highcharts-state-hover path {
@@ -275,6 +296,7 @@ div.highcharts-tooltip {
 }
 
 /* Legend hover affects points and series */
+
 g.highcharts-series,
 .highcharts-point,
 .highcharts-markers,
@@ -283,17 +305,14 @@ g.highcharts-series,
 }
 
 .highcharts-legend-series-active
-  g.highcharts-series:not(.highcharts-series-hover),
-.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
-.highcharts-legend-series-active
-  .highcharts-markers:not(.highcharts-series-hover),
-.highcharts-legend-series-active
-  .highcharts-data-labels:not(.highcharts-series-hover) {
+  g.highcharts-series:not(.highcharts-series-hover) {
   opacity: 0.2;
 }
 
 /* Series options */
+
 /* Default colors */
+
 .highcharts-color-0 {
   fill: #2b908f;
   stroke: #2b908f;
@@ -359,11 +378,7 @@ g.highcharts-series,
   stroke: #2a2a2b;
 }
 
-.highcharts-a11y-markers-hidden
-  .highcharts-point:not(.highcharts-point-hover):not(
-    .highcharts-a11y-marker-visible
-  ),
-.highcharts-a11y-marker-hidden {
+.highcharts-a11y-markers-hidden .highcharts-point:not(.highcharts-point-hover) {
   opacity: 0;
 }
 
@@ -403,8 +418,7 @@ text.highcharts-data-label {
   stroke-width: 0;
 }
 
-.highcharts-series:not(.highcharts-pie-series) .highcharts-point-select,
-.highcharts-markers .highcharts-point-select {
+.highcharts-series:not(.highcharts-pie-series) {
   fill: #606063;
   stroke: #fff;
 }
@@ -418,8 +432,9 @@ text.highcharts-data-label {
 }
 
 .highcharts-column-series .highcharts-point-hover {
-  fill-opacity: 0.75;
   transition: fill-opacity 50ms;
+
+  fill-opacity: 0.75;
 }
 
 .highcharts-pie-series .highcharts-point {
@@ -428,8 +443,9 @@ text.highcharts-data-label {
 }
 
 .highcharts-pie-series .highcharts-point-hover {
-  fill-opacity: 0.75;
   transition: fill-opacity 50ms;
+
+  fill-opacity: 0.75;
 }
 
 .highcharts-funnel-series .highcharts-point {
@@ -438,8 +454,9 @@ text.highcharts-data-label {
 }
 
 .highcharts-funnel-series .highcharts-point-hover {
-  fill-opacity: 0.75;
   transition: fill-opacity 50ms;
+
+  fill-opacity: 0.75;
 }
 
 .highcharts-funnel-series .highcharts-point-select {
@@ -453,8 +470,9 @@ text.highcharts-data-label {
 }
 
 .highcharts-pyramid-series .highcharts-point-hover {
-  fill-opacity: 0.75;
   transition: fill-opacity 50ms;
+
+  fill-opacity: 0.75;
 }
 
 .highcharts-pyramid-series .highcharts-point-select {
@@ -467,14 +485,16 @@ text.highcharts-data-label {
 }
 
 .highcharts-treemap-series .highcharts-point {
+  transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
+
   stroke-width: 1px;
   stroke: #707073;
-  transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
 }
 
 .highcharts-treemap-series .highcharts-point-hover {
-  stroke: #666;
   transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
+
+  stroke: #666;
 }
 
 .highcharts-treemap-series .highcharts-above-level {
@@ -486,8 +506,9 @@ text.highcharts-data-label {
 }
 
 .highcharts-treemap-series .highcharts-internal-node-interactive {
-  fill-opacity: 0.15;
   cursor: pointer;
+
+  fill-opacity: 0.15;
 }
 
 .highcharts-treemap-series .highcharts-internal-node-interactive:hover {
@@ -518,16 +539,19 @@ text.highcharts-data-label {
 }
 
 /* Legend */
+
 .highcharts-legend-box {
   fill: none;
   stroke-width: 0;
 }
 
 .highcharts-legend-item > text {
-  fill: #e0e0e3;
-  font-weight: bold;
   font-size: 1em;
+  font-weight: bold;
+
   cursor: pointer;
+
+  fill: #e0e0e3;
   stroke-width: 0;
 }
 
@@ -536,14 +560,16 @@ text.highcharts-data-label {
 }
 
 .highcharts-legend-item-hidden * {
+  transition: fill 250ms;
+
   fill: #606063 !important;
   stroke: #606063 !important;
-  transition: fill 250ms;
 }
 
 .highcharts-legend-nav-active {
-  fill: #f0f0f3;
   cursor: pointer;
+
+  fill: #f0f0f3;
 }
 
 .highcharts-legend-nav-inactive {
@@ -553,6 +579,7 @@ text.highcharts-data-label {
 circle.highcharts-legend-nav-active,
 circle.highcharts-legend-nav-inactive {
   /* tracker */
+
   fill: rgba(192, 192, 192, 0.0001);
 }
 
@@ -562,6 +589,7 @@ circle.highcharts-legend-nav-inactive {
 }
 
 /* Bubble legend */
+
 .highcharts-bubble-legend-symbol {
   stroke-width: 2;
   fill-opacity: 0.5;
@@ -576,29 +604,37 @@ circle.highcharts-legend-nav-inactive {
 }
 
 /* Loading */
+
 .highcharts-loading {
   position: absolute;
-  background-color: #2a2a2b;
-  opacity: 0.5;
-  text-align: center;
   z-index: 10;
+
   transition: opacity 250ms;
+  text-align: center;
+
+  opacity: 0.5;
+  background-color: #2a2a2b;
 }
 
 .highcharts-loading-hidden {
-  height: 0 !important;
-  opacity: 0;
   overflow: hidden;
+
+  height: 0 !important;
+
   transition: opacity 250ms, height 250ms step-end;
+
+  opacity: 0;
 }
 
 .highcharts-loading-inner {
   font-weight: bold;
+
   position: relative;
   top: 45%;
 }
 
 /* Plot bands and polar pane backgrounds */
+
 .highcharts-plot-band,
 .highcharts-pane {
   fill: #fff;
@@ -612,6 +648,7 @@ circle.highcharts-legend-nav-inactive {
 }
 
 /* Highcharts More and modules */
+
 .highcharts-boxplot-box {
   fill: #2a2a2b;
 }
@@ -654,18 +691,21 @@ circle.highcharts-legend-nav-inactive {
 
 .highcharts-sankey-series .highcharts-link {
   transition: fill 250ms, fill-opacity 250ms;
+
   fill-opacity: 0.5;
 }
 
 .highcharts-sankey-series .highcharts-point-hover.highcharts-link {
   transition: fill 50ms, fill-opacity 50ms;
+
   fill-opacity: 1;
 }
 
 .highcharts-venn-series .highcharts-point {
+  transition: stroke 250ms, fill-opacity 250ms;
+
   fill-opacity: 0.75;
   stroke: #606063;
-  transition: stroke 250ms, fill-opacity 250ms;
 }
 
 .highcharts-venn-series .highcharts-point-hover {
@@ -674,14 +714,16 @@ circle.highcharts-legend-nav-inactive {
 }
 
 /* Highstock */
+
 .highcharts-navigator-mask-outside {
   fill-opacity: 0;
 }
 
 .highcharts-navigator-mask-inside {
+  cursor: ew-resize;
+
   fill: rgba(255, 255, 255, 0.1); /* navigator.maskFill option */
   fill-opacity: 0.25;
-  cursor: ew-resize;
 }
 
 .highcharts-navigator-outline {
@@ -690,9 +732,10 @@ circle.highcharts-legend-nav-inactive {
 }
 
 .highcharts-navigator-handle {
+  cursor: ew-resize;
+
   stroke: #606063;
   fill: #505053;
-  cursor: ew-resize;
 }
 
 .highcharts-navigator-series {
@@ -753,11 +796,12 @@ circle.highcharts-legend-nav-inactive {
 }
 
 .highcharts-button {
+  cursor: default;
+  transition: fill 250ms;
+
   fill: #505053;
   stroke: #606063;
-  cursor: default;
   stroke-width: 1px;
-  transition: fill 250ms;
 }
 
 .highcharts-button text {
@@ -766,6 +810,7 @@ circle.highcharts-legend-nav-inactive {
 
 .highcharts-button-hover {
   transition: fill 0ms;
+
   fill: #707073;
   stroke: #606063;
 }
@@ -776,13 +821,15 @@ circle.highcharts-legend-nav-inactive {
 
 .highcharts-button-pressed {
   font-weight: bold;
+
   fill: #000003;
   stroke: #606063;
 }
 
 .highcharts-button-pressed text {
-  fill: #fff;
   font-weight: bold;
+
+  fill: #fff;
 }
 
 .highcharts-button-disabled text {
@@ -816,17 +863,21 @@ circle.highcharts-legend-nav-inactive {
 
 input.highcharts-range-selector {
   position: absolute;
-  border: 0;
+  left: -9em; /* #4798 */
+
   width: 1px; /* Chrome needs a pixel to see it */
   height: 1px;
   padding: 0;
+
   text-align: center;
-  left: -9em; /* #4798 */
+
+  border: 0;
 }
 
 .highcharts-crosshair-label text {
-  fill: #2a2a2b;
   font-size: 1.1em;
+
+  fill: #2a2a2b;
 }
 
 .highcharts-crosshair-label .highcharts-label-box {
@@ -862,9 +913,10 @@ input.highcharts-range-selector {
 }
 
 .highcharts-flags-series .highcharts-point .highcharts-label-box {
+  transition: fill 250ms;
+
   stroke: #666;
   fill: #2a2a2b;
-  transition: fill 250ms;
 }
 
 .highcharts-flags-series .highcharts-point-hover .highcharts-label-box {
@@ -873,20 +925,24 @@ input.highcharts-range-selector {
 }
 
 .highcharts-flags-series .highcharts-point text {
-  fill: #fff;
   font-size: 0.9em;
   font-weight: bold;
+
+  fill: #fff;
 }
 
 /* Highcharts Maps */
+
 .highcharts-map-series .highcharts-point {
   transition: fill 500ms, fill-opacity 500ms, stroke-width 250ms;
+
   stroke: #606063;
   stroke-width: inherit;
 }
 
 .highcharts-map-series .highcharts-point-hover {
   transition: fill 0ms, fill-opacity 0ms;
+
   fill-opacity: 0.5;
 }
 
@@ -901,6 +957,7 @@ input.highcharts-range-selector {
 .highcharts-map-navigation {
   font-size: 1.3em;
   font-weight: bold;
+
   text-align: center;
 }
 
@@ -923,11 +980,13 @@ input.highcharts-range-selector {
 }
 
 /* 3d charts */
+
 .highcharts-3d-frame {
   fill: transparent;
 }
 
 /* Exporting module */
+
 .highcharts-contextbutton {
   fill: #505053; /* needed to capture hover */
   stroke: none;
@@ -945,30 +1004,35 @@ input.highcharts-range-selector {
 }
 
 .highcharts-menu {
+  padding: 5px 0;
+
   border: 1px solid #666;
   background: #2a2a2b;
-  padding: 5px 0;
   box-shadow: 3px 3px 10px #888;
 }
 
 .highcharts-menu-item {
   padding: 0.5em 1em;
-  background: none;
-  color: #e0e0e3;
+
   cursor: pointer;
   transition: background 250ms, color 250ms;
+
+  color: #e0e0e3;
+  background: none;
 }
 
 .highcharts-menu-item:hover {
-  background: #335cad;
   color: #2a2a2b;
+  background: #335cad;
 }
 
 /* Breadcrumbs */
+
 .highcharts-breadcrumbs-button {
+  cursor: pointer;
+
   fill: none;
   stroke-width: 0;
-  cursor: pointer;
 }
 
 .highcharts-breadcrumbs-separator {
@@ -976,6 +1040,7 @@ input.highcharts-range-selector {
 }
 
 /* Drilldown module */
+
 .highcharts-drilldown-point {
   cursor: pointer;
 }
@@ -983,32 +1048,40 @@ input.highcharts-range-selector {
 .highcharts-drilldown-data-label text,
 text.highcharts-drilldown-data-label,
 .highcharts-drilldown-axis-label {
-  cursor: pointer;
-  fill: #f0f0f3;
   font-weight: bold;
+
+  cursor: pointer;
   text-decoration: underline;
+
+  fill: #f0f0f3;
 }
 
 /* No-data module */
+
 .highcharts-no-data text {
-  font-weight: bold;
   font-size: 12px;
+  font-weight: bold;
+
   fill: #e0e0e3;
 }
 
 /* Drag-panes module */
+
 .highcharts-axis-resizer {
   cursor: ns-resize;
+
   stroke: black;
   stroke-width: 2px;
 }
 
 /* Bullet type series */
+
 .highcharts-bullet-target {
   stroke-width: 0;
 }
 
 /* Lineargauge type series */
+
 .highcharts-lineargauge-target {
   stroke-width: 1px;
   stroke: #e0e0e3;
@@ -1020,6 +1093,7 @@ text.highcharts-drilldown-data-label,
 }
 
 /* Annotations module */
+
 .highcharts-annotation-label-box {
   stroke-width: 1px;
   stroke: #fff;
@@ -1032,18 +1106,23 @@ text.highcharts-drilldown-data-label,
 }
 
 /* A11y module */
+
 .highcharts-a11y-proxy-button {
-  border-width: 0;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  opacity: 0.001;
-  z-index: 999;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  display: block;
   position: absolute;
+  z-index: 999;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  opacity: 0.001;
+  border-width: 0;
+  outline: none;
+  background-color: transparent;
 }
 
 .highcharts-a11y-proxy-group li {
@@ -1052,12 +1131,16 @@ text.highcharts-drilldown-data-label,
 
 .highcharts-visually-hidden {
   position: absolute;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-  clip: rect(1px, 1px, 1px, 1px);
   margin-top: -3px;
+
+  white-space: nowrap;
+
   opacity: 0.01;
 }
 
@@ -1069,6 +1152,7 @@ text.highcharts-drilldown-data-label,
 .highcharts-a11y-proxy-container-before,
 .highcharts-a11y-proxy-container-after {
   position: absolute;
+
   white-space: nowrap;
 }
 
@@ -1079,6 +1163,7 @@ g.highcharts-series,
 }
 
 /* Gantt */
+
 .highcharts-treegrid-node-collapsed,
 .highcharts-treegrid-node-expanded {
   cursor: pointer;
