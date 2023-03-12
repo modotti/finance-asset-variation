@@ -18,6 +18,9 @@ export class AssetChangeChartComponent implements OnChanges {
     const prices = this.data.map((item) => Math.round(item.price * 100) / 100);
 
     this.chartOptions = {
+      accessibility: {
+        enabled: false,
+      },
       title: {
         text: '',
       },
