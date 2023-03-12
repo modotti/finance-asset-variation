@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { AssetChangeChartComponent } from './asset-change-chart.component';
 
@@ -8,9 +9,8 @@ describe('AssetChangeChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AssetChangeChartComponent ]
-    })
-    .compileComponents();
+      declarations: [AssetChangeChartComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AssetChangeChartComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,10 @@ describe('AssetChangeChartComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render elements properly', () => {
+    const chart = fixture.debugElement.queryAll(By.css('highcharts-chart'));
+    expect(chart).toBeTruthy();
   });
 });

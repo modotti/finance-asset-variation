@@ -32,7 +32,7 @@ describe('AssetChangeTableComponent', () => {
         date: '03/01/2023',
         price: 7.5,
         changeLastDay: -50,
-        changeOnPeriod: -50,
+        changeOnPeriod: -25,
       },
     ];
     fixture.detectChanges();
