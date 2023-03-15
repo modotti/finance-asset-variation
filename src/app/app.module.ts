@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './asset-view/core.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, CoreModule],

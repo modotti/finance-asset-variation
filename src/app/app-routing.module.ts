@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AssetChangeComponent } from './asset-view/pages/asset-change/asset-change.component';
+import { AssetChangeComponent } from './core/pages/asset-change/asset-change.component';
 
 const routes: Routes = [
   {
