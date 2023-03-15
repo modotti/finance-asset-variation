@@ -21,4 +21,4 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [CommonModule, HighchartsChartModule],
   providers: [AssetDataService, AssetDataHandlerService],
 })
-export class AssetViewModule {}
+export class CoreModule {}

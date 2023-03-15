@@ -4,10 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AssetViewModule } from './asset-view/asset-view.module';
+import { CoreModule } from './asset-view/core.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, AssetViewModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CoreModule],
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
