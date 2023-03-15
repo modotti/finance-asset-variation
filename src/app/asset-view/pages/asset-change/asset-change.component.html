@@ -1,27 +1,30 @@
-<div class="app-asset-change">
-  
-  <app-header 
-    [assetList]="availableAssetList" 
-    (changeEvent)="onChangeAsset($event)"
-  />
+<div class="text-gray-900 min-h-screen bg-app">
+  <div class="max-w-screen-lg m-auto">
+    <app-header 
+      [assetList]="availableAssetList" 
+      (changeEvent)="onChangeAsset($event)"
+    />
 
-  <div *ngIf="!errorMessage && !loading">
-    <app-asset-change-chart [data]="assetChangeList"/>
-    <app-asset-change-table [data]="assetChangeList"/>
+    <div *ngIf="!errorMessage && !loading">
+      <app-asset-change-chart [data]="assetChangeList"/>
+      <app-asset-change-table [data]="assetChangeList"/>
+    </div>
+
+    <div 
+      id="errorMessage"
+      class="p-16 mt-8 bg-slate-200 text-center rounded-3xl text-rose-700" 
+      *ngIf="errorMessage && !loading">
+        Não foi possível consultar dados:<br/><strong>{{errorMessage}}</strong>
+    </div>  
+
+    <div 
+      id="loadingMessage"
+      class="p-16 mt-8 bg-slate-200 text-center rounded-3xl" 
+      *ngIf="loading">
+        Carregando...
+    </div>  
+
+    <app-footer *ngIf="!errorMessage && !loading"/>
+
   </div>
-
-  <div 
-    class="app-asset-change__error" 
-    *ngIf="errorMessage && !loading">
-      {{errorMessage}}
-  </div>  
-
-  <div 
-    class="app-asset-change__loading" 
-    *ngIf="loading">
-      Carregando...
-  </div>  
-
-  <app-footer *ngIf="!errorMessage && !loading"/>
-
 </div>

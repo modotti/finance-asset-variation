@@ -20,6 +20,7 @@ Execute o comando `npm test` para executar os testes unitários com [Jest]
 ## 🛠️ Construído com
 
 - [Angular](https://angular.io/)
+- [Tailwind](https://tailwindcss.com/)
 - [Jest](https://jestjs.io/pt-BR/)
 - [Highcharts](https://www.highcharts.com/)
 

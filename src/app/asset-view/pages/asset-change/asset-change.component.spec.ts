@@ -2,7 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { of, throwError } from 'rxjs';
-import { AssetViewModule } from '../../asset-view.module';
+import { CoreModule } from '../../core.module';
 import { AssetChartResult } from '../../models/asset-chart-result.model';
 import { AssetDataHandlerService } from '../../services/asset-data/asset-data-handler.service';
 import { AssetDataService } from '../../services/asset-data/asset-data.service';
@@ -19,7 +19,7 @@ describe('AssetChangeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AssetViewModule, HttpClientTestingModule],
+      imports: [CoreModule, HttpClientTestingModule],
       declarations: [AssetChangeComponent],
       providers: [
         AssetDataService,
@@ -128,12 +128,8 @@ describe('AssetChangeComponent', () => {
     const footer = fixture.debugElement.query(By.css('app-footer'));
     const chart = fixture.debugElement.query(By.css('app-asset-change-chart'));
     const table = fixture.debugElement.query(By.css('app-asset-change-table'));
-    const loading = fixture.debugElement.query(
-      By.css('.app-asset-change__loading')
-    );
-    const error = fixture.debugElement.query(
-      By.css('.app-asset-change__error')
-    );
+    const loading = fixture.debugElement.query(By.css('#loadingMessage'));
+    const error = fixture.debugElement.query(By.css('#errorMessage'));
 
     expect(header).toBeTruthy();
     expect(footer).toBeFalsy();
@@ -152,12 +148,8 @@ describe('AssetChangeComponent', () => {
     const footer = fixture.debugElement.query(By.css('app-footer'));
     const chart = fixture.debugElement.query(By.css('app-asset-change-chart'));
     const table = fixture.debugElement.query(By.css('app-asset-change-table'));
-    const loading = fixture.debugElement.query(
-      By.css('.app-asset-change__loading')
-    );
-    const error = fixture.debugElement.query(
-      By.css('.app-asset-change__error')
-    );
+    const loading = fixture.debugElement.query(By.css('#loadingMessage'));
+    const error = fixture.debugElement.query(By.css('#errorMessage'));
 
     expect(header).toBeTruthy();
     expect(footer).toBeFalsy();

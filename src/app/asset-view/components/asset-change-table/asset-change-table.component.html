@@ -1,44 +1,58 @@
-<div class="app-asset-change-table">
-  <table>
-    <thead>
-      <tr>
-        <th>Dia</th>
-        <th>Data</th>
-        <th>Valor</th>
-        <th>Var. diária</th>
-        <th>Var. período</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of data; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ item.date }}</td>
-        <td>R$ {{ item.price | number : "1.2-2" }}</td>
-        <td
-          [ngClass]="
-            item.changeLastDay
-              ? item.changeLastDay > 0
-                ? 'positive'
-                : 'negative'
-              : ''
-          "
-        >
-          {{ item.changeLastDay | number : "1.2-2" }}
-          {{ item.changeLastDay ? "%" : "" }}
-        </td>
-        <td
-          [ngClass]="
-            item.changeOnPeriod
-              ? item.changeOnPeriod > 0
-                ? 'positive'
-                : 'negative'
-              : ''
-          "
-        >
-          {{ item.changeOnPeriod | number : "1.2-2" }}
-          {{ item.changeOnPeriod ? "%" : "" }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="flex flex-col m-8">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium">
+            <tr>
+              <th scope="col" class="px-6 py-4 text-center">Dia</th>
+              <th scope="col" class="px-6 py-4 text-center">Data</th>
+              <th scope="col" class="px-6 py-4 text-center">Valor</th>
+              <th scope="col" class="px-6 py-4 text-center">Var. diária</th>
+              <th scope="col" class="px-6 py-4 text-center">Var. período</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data; let i = index" class="border-b">
+              <td class="whitespace-nowrap px-6 py-4 font-medium text-center">
+                {{ i + 1 }}
+              </td>
+              <td class="whitespace-nowrap px-6 py-4 text-center">
+                {{ item.date }}
+              </td>
+              <td class="whitespace-nowrap px-6 py-4 text-center">
+                R$ {{ item.price | number : "1.2-2" }}
+              </td>
+              <td
+                class="whitespace-nowrap px-6 py-4 text-center"
+                [ngClass]="
+                  item.changeLastDay
+                    ? item.changeLastDay > 0
+                      ? 'text-[#2ca090]'
+                      : 'text-[#ff0054]'
+                    : ''
+                "
+              >
+                {{ item.changeLastDay | number : "1.2-2" }}
+                {{ item.changeLastDay ? "%" : "" }}
+              </td>
+              <td
+                class="whitespace-nowrap px-6 py-4 text-center"
+                [ngClass]="
+                  item.changeOnPeriod
+                    ? item.changeOnPeriod > 0
+                      ? 'text-[#2ca090]'
+                      : 'text-[#ff0054]'
+                    : ''
+                "
+              >
+                {{ item.changeOnPeriod | number : "1.2-2" }}
+                {{ item.changeOnPeriod ? "%" : "" }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
