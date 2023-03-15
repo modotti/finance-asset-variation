@@ -1,8 +1,13 @@
-<div class="header">
-  <h1>{{ symbol }}</h1>
-  <select #assets (change)="onChangeAsset()">
+<div class="flex items-center justify-center flex-col">
+  <h1 class="text-6xl mt-16 mb-4 font-bold">{{ symbol }}</h1>
+  <select
+    class="text-gray-900 p-4 mb-8 rounded-md border-2"
+    #assets
+    (change)="onChangeAsset()"
+  >
     <option *ngFor="let item of assetList" value="{{ item.symbol }}">
       {{ item.description }}
     </option>
   </select>
+  <p>Variação do ativo nos últimos 30 pregões:</p>
 </div>

@@ -108,7 +108,7 @@
 }
 
 .highcharts-background {
-  fill: #11151b;
+  fill: transparent;
 }
 
 .highcharts-plot-border,
@@ -154,7 +154,7 @@
 
 .highcharts-axis-line {
   fill: none;
-  stroke: #707073;
+  stroke: #bbbbc4;
 }
 
 .highcharts-yaxis .highcharts-axis-line {
@@ -175,7 +175,7 @@
 
 .highcharts-grid-line {
   fill: none;
-  stroke: #707073;
+  stroke: #dbdbe6;
 }
 
 .highcharts-xaxis-grid .highcharts-grid-line {

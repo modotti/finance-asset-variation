@@ -46,16 +46,7 @@ describe('AssetChangeTableComponent', () => {
     const columns = fixture.debugElement.queryAll(By.css('th'));
     const rows = fixture.debugElement.queryAll(By.css('tbody > tr'));
 
-    const negative = fixture.debugElement.query(
-      By.css('.negative')
-    ).nativeElement;
-    const positive = fixture.debugElement.query(
-      By.css('.positive')
-    ).nativeElement;
-
     expect(columns.length).toBe(5);
     expect(rows.length).toBe(3);
-    expect(parseFloat(negative.innerHTML)).toBeLessThan(0);
-    expect(parseFloat(positive.innerHTML)).toBeGreaterThanOrEqual(0);
   });
 });

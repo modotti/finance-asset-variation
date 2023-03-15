@@ -45,7 +45,7 @@ export class AssetChangeChartComponent implements OnChanges {
         {
           name: 'Valor',
           showInLegend: false,
-          color: this.isPositive() ? '#1eff00' : '#ff0054',
+          color: this.isPositive() ? '#2ca090' : '#ff0054',
           type: 'line',
           data: prices,
           marker: {

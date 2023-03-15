@@ -128,12 +128,8 @@ describe('AssetChangeComponent', () => {
     const footer = fixture.debugElement.query(By.css('app-footer'));
     const chart = fixture.debugElement.query(By.css('app-asset-change-chart'));
     const table = fixture.debugElement.query(By.css('app-asset-change-table'));
-    const loading = fixture.debugElement.query(
-      By.css('.app-asset-change__loading')
-    );
-    const error = fixture.debugElement.query(
-      By.css('.app-asset-change__error')
-    );
+    const loading = fixture.debugElement.query(By.css('#loadingMessage'));
+    const error = fixture.debugElement.query(By.css('#errorMessage'));
 
     expect(header).toBeTruthy();
     expect(footer).toBeFalsy();
@@ -152,12 +148,8 @@ describe('AssetChangeComponent', () => {
     const footer = fixture.debugElement.query(By.css('app-footer'));
     const chart = fixture.debugElement.query(By.css('app-asset-change-chart'));
     const table = fixture.debugElement.query(By.css('app-asset-change-table'));
-    const loading = fixture.debugElement.query(
-      By.css('.app-asset-change__loading')
-    );
-    const error = fixture.debugElement.query(
-      By.css('.app-asset-change__error')
-    );
+    const loading = fixture.debugElement.query(By.css('#loadingMessage'));
+    const error = fixture.debugElement.query(By.css('#errorMessage'));
 
     expect(header).toBeTruthy();
     expect(footer).toBeFalsy();
