@@ -15,7 +15,7 @@ export class AssetDataService {
   constructor(private httpClient: HttpClient) {}
 
   getDataFromYahoo(assetSymbol: string): Observable<AssetChartResult> {
-    const url = `/finance/chart/${assetSymbol}?interval=1d&range=30d`;
+    const url = `/finance/chart/${assetSymbol}?interval=1d&period1=1672542000&period2=1677553200`;
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

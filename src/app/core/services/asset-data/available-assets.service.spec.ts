@@ -16,6 +16,6 @@ describe('AvailableAssetsService', () => {
 
   it('should return expected mocked data', () => {
     const assets = service.getAssets();
-    expect(assets.length).toBe(25);
+    expect(assets.length).toBe(88);
   });
 });
