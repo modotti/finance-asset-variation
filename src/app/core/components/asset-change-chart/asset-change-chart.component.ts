@@ -38,14 +38,14 @@ export class AssetChangeChartComponent implements OnChanges {
       },
       tooltip: {
         style: {
-          color: '#fff',
+          color: '#668',
         },
       },
       series: [
         {
           name: 'Valor',
           showInLegend: false,
-          color: this.isPositive() ? '#2ca090' : '#ff0054',
+          color: this.isPositive() ? '#10a171' : '#d8224f',
           type: 'line',
           data: prices,
           marker: {
