@@ -6,6 +6,7 @@
     />
 
     <div *ngIf="!errorMessage && !loading">
+      <p class="text-center">Variação do ativo em 2023</p>
       <app-asset-change-chart [data]="assetChangeList"/>
       <app-asset-change-table [data]="assetChangeList"/>
     </div>
